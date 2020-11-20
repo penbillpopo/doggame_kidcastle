@@ -1,0 +1,17 @@
+Options -Indexes +FollowSymlinks
+RewriteEngine On
+<IfModule mod_php5.c>
+   php_value short_open_tag 1
+</IfModule>
+<IfModule mod_headers.c>
+Header set X-Permitted-Cross-Domain-Policies "*"
+Header set Access-Control-Allow-Origin "*"
+#Header set Content-Security-Policy " \
+    default-src 'self' 'unsafe-inline' *.kidcastle.cn *.googleapis.com *.gstatic.com *.youtube-nocookie.com *.youku.com  ; \
+"
+#Header set Content-Security-Policy " img-src 'self' data: https://oss.kidcastle.cn http://oss.kidcastle.cn ; "
+</IfModule>
+
+<FilesMatch "\.(js)$">
+	Header set Access-Control-Allow-Origin "*"
+</FilesMatch>

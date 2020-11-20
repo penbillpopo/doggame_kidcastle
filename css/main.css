@@ -1,0 +1,69 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  overflow-y: hidden;
+}
+
+.jconfirm-box-container {
+  width: 30%;
+  margin: 0 auto;
+}
+
+.jconfirm-buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 180px;
+}
+
+.jconfirm-buttons button {
+  width: 80px;
+  height: 40px;
+}
+
+.jconfirm .jconfirm-box .jconfirm-buttons > button {
+  margin-left: 10px;
+}
+
+.gametable {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  margin-top: 0vh;
+  background-color: black;
+}
+
+.gametable canvas {
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
+
+.gametable.slide {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url("../img/turn.jpg");
+}
+
+.gametable.slide canvas {
+  opacity: 0;
+}
